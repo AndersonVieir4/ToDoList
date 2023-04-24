@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { MaterialIcons, AntDesign, FontAwesome } from '@expo/vector-icons';
 
-
 const App = () => {
   const [numero, setNumero] = useState('');
-
 
   return (
     <View style={styles.container}>
@@ -21,22 +19,23 @@ const App = () => {
       </TouchableOpacity>
       <Text style={styles.textoOu}>ou</Text>
       <TouchableOpacity style={styles.botaoGoogle}>
-        <MaterialIcons name="google" size={24} color="white" />
+        <AntDesign name="googleplus" size={24} color="black" />
         <Text style={styles.textoBotaoSocial}>Continuar com o Google</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.botaoApple}>
-        <AntDesign name="apple1" size={24} color="white" />
+        <AntDesign name="apple1" size={24} color="black" />
         <Text style={styles.textoBotaoSocial}>Continuar com a Apple</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.botaoFacebook}>
-        <FontAwesome name="facebook" size={24} color="white" />
+        <AntDesign name="facebook-square" size={24} color="black" />
         <Text style={styles.textoBotaoSocial}>Continuar com o Facebook</Text>
       </TouchableOpacity>
       <Text style={styles.textoOu}>ou</Text>
-      <TouchableOpacity style={styles.botaoLupa}>
-        <FontAwesome name="search" size={24} color="black" />
-        <Text style={styles.textoBotaoSocial}>Encontrar minha conta</Text>
+      <TouchableOpacity style={styles.botaoEncontrar}>
+        <FontAwesome name="search" size={20} color="black" />
+        <Text style={styles.textoBotaoSocial}> Encontrar minha conta</Text>
       </TouchableOpacity>
+      <Text style={styles.aviso}>Ao continuar, você concorda em receber chamadas e mensagens SMS ou pelo WhatsApp, inclusive automáticas, da Uber e de suas afiliadas, no número informado.</Text>
     </View>
   );
 };
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
   },
   botaoGoogle: {
     flexDirection: 'row',
-    backgroundColor: '#db4437',
+    backgroundColor: '#eeeeee',
     height: 50,
     width: '100%',
     justifyContent: 'center',
@@ -92,7 +91,7 @@ const styles = StyleSheet.create({
   },
   botaoApple: {
     flexDirection: 'row',
-    backgroundColor: '#000',
+    backgroundColor: '#eeeeee',
     height: 50,
     width: '100%',
     justifyContent: 'center',
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
   },
   botaoFacebook: {
     flexDirection: 'row',
-    backgroundColor: '#3b5998',
+    backgroundColor: '#eeeeee',
     height: 50,
     width: '100%',
     justifyContent: 'center',
@@ -115,7 +114,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 10,
   },
+    botaoEncontrar: {
+    flexDirection: 'row',
+    backgroundColor:'white',
+    height: 50,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    marginTop: 10,
+  }, 
+    aviso: {
+    fontSize: 10,
+    marginTop: 10,
+    marginBottom: 5,
+    color: 'gray',
+  }, 
 });
-
 
 export default App;
