@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -10,14 +11,15 @@ export default function App() {
         source={require('./assets/uber.PNG')}
         style={{ width: 200, height: 200 }}
       />
-      <Text style={[styles.safetyText, { marginBottom: 32 }]}>Viaje em segurança</Text>
+      <Text style={[styles.safetyText, { marginBottom: 2 }]}>Viaje em segurança</Text>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Começar</Text>
-        <FontAwesome name="arrow-right" size={20} color="#2d6cf0" style={styles.arrowIcon} />
+        <FontAwesome name="arrow-right" size={20} color="#2d6cf0" width = '90%' style={styles.arrowIcon} />
       </TouchableOpacity>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -27,14 +29,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#2d6cf0',
   },
   uberText: {
-    fontSize: 42,
+    fontSize: 30,
     marginBottom: 40,
     color: 'white',
-  },
-  image: {
-    width: 350,
-    height: 150,
-    marginBottom: 16,
   },
   safetyText: {
     fontSize: 24,
@@ -45,18 +42,20 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginTop: 200,
-    width: '80%',
+    width: '90%',
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   buttonText: {
     color: 'white',
-    fontSize: 18,
+    fontSize: 14,
     textAlign: 'center',
+    width: '100%',
+
+
   },
   arrowIcon: {
-    marginLeft: 150,
+    marginLeft: 'auto',
     color: 'white',
   },
 });
