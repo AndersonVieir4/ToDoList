@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.uberText}>Uber</Text>
       <Image
-        source={require('./assets/uber.PNG')}
+        source={require('./assets/uber.png')}
         style={{ width: 200, height: 200 }}
       />
       <Text style={[styles.safetyText, { marginBottom: 2 }]}>Viaje em segurança</Text>
